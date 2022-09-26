@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Arimo';
+    src: url("../assets/font/Arimo-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0; 
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    background-color: rgb(250, 250, 250);
+    z-index: 111;
+    height: 200px;    
+}
+
+#icono_home {
+    margin: 10px;
+}
+
+main {
+    background-color: rgb(250, 250, 250);
+    color: rgb(253, 71, 39);
+    font-size: 200%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    align-content:center;
+    justify-items:baseline;
+    overflow: hidden;    
+}
+
+.circulo_central {
+    background-image: url("../assets/img/Circulo_1.png");
+    width: 100%;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    justify-items: center;
+}
+
+/* Menú lateral */
+.menu {
+    writing-mode:  vertical-lr;
+    transform: rotate(180deg);
+    text-align: left;
+    align-self: baseline;
+    padding: 15px;
+}
+
+.icono {
+    padding: 2rem;
+    background-color: transparent;
+    width: 6rem;    
+    margin: 0px;
+}
+
+
+/* Para el menú general */
+ul { 
+    margin: 15px;  
+    height: 400px;
+    padding-left: 5%;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items:center;
+    justify-content: space-evenly;
+    
+    }
+
+li {
+    margin: 0px;
+    list-style: none;
+    font-size: 100%;
+    
+}
+
+article {
+    margin: auto;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-items:center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+/* Títulos del home ********************/
+h2 {
+    font-family: 'Arimo', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 270%;
+    text-align: left;
+    margin-left: 50%;
+    margin-bottom: 5px;  
+}
+
+h3 {
+    font-family: 'Arimo', italic;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 100%;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 50%;
+    margin-bottom: 50px;
+    
+}
+/* ******************************** */
+
+p {
+    font-size: 100%;
+    line-height: 200%;
+    text-indent: 5%;
+    margin-left: 5%; 
+}
+
+a {
+    font-family: 'Arimo', sans-serif;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 100px; 
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: transparent;   
+}
+
+
+.calculadora_input {
+    font-family: 'Arimo', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70%;
+    width: 80%;
+    border-radius: 40px;
+    line-height: 2rem;
+    padding: 5px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 15px;
+    padding-left: 5%;
+    height: 600px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-items:center;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(250, 250, 250);
+}
+
+footer span {
+    font-size: 100%;
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.5);    
+}
+
+li a {
+    margin: 0;
+    padding: 0px;
+}
+
+/* Texto de los párrafos largos */
+.info {
+    font-family: 'Arimo', sans-serif;
+    font-style: italic;
+    width: 100%;
+    margin: 15px;
+    padding-left: 5%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+    width: 100%;
+    font-family: 'Arimo', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 150%;
+    margin-right: 15px;
+    padding-right: 5%;
+    border-right: 2px solid;
+    height: 600px;
+    text-align: center;
+    line-height: normal;
+}
+
+
+.formulario > input  {
+    width: 80%;
+    border-radius: 40px;
+    line-height: 1.5rem;
+    padding-left: 15px;
+    padding-top: 0;
+}
+
+.formulario > label {
+    color: gray;
+    margin-top: 10px;
+    padding-bottom: 3px;
+    font-family: 'Arimo', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 70%;
+}
+
+.enviar {
+    font-family: 'Arimo', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70%;
+    margin-top: 20px;
+}
+
+
+#comentarios {
+    height: 200px;
+}
