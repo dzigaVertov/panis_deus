@@ -163,11 +163,11 @@ a {
 }
 
 nav {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    justify-content: space-between;  */
+    justify-content: space-between; 
     background-color: transparent;   
 }
 
@@ -283,5 +283,100 @@ li a {
         font-size: 190%;
     }
 
+    aside {font-size: 150%;}
+ 
+    .icono {
+        width: 5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 0px;
+        grid-template-rows: 1fr 6fr 1fr .5fr;
+        align-items: center;
+        background-color: rgb(250, 250, 250);
+        height: 100vh;
+    }
+ 
+    aside {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        justify-self: start;
+        align-self: end;
+        margin: 0;
+        max-width: 100%;
+        font-size: 120%;    
+        margin: auto;   
+        
+    }
+
+    .menu {
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-align: left;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .icono {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        width: 500px;
+        margin: auto;
+    }
+
+    article {
+        grid-auto-flow: row;
+        grid-auto-columns: none;
+        justify-items: center;
+        height: auto;
+    }
+
+    .titulo {
+        height: auto;
+        width: 100%;
+        border: none;
+        text-align: center;
+        align-self: end;
+        padding: 0;
+    }
+
+    ul {
+        width: auto;
+        align-self: start;
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    ul li {
+        text-align: center;
+    }
+
+    .info {
+        align-self: start;
+        width: 60%;    
+    }
+
+    .formulario {
+        align-items: center;
+        height: auto;
+    }
+
+    h2, h3 {
+        margin: 0;
+        text-align: center;
+    }
+
+    #comentarios, #label_comentarios {
+        display: none;
+    }
     
 }
