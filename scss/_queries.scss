@@ -1,0 +1,25 @@
+
+@mixin xsmall {
+    @media screen and (max-width: map-get($query_breakpoints, "sm")) {
+        @content;        
+    }
+}
+
+@mixin small {
+    @media screen and (max-width: map-get($query_breakpoints, "md")) {
+        @content;        
+    }
+}
+
+@mixin medium {
+    @media screen and (max-width: map-get($query_breakpoints, "lg")) {
+        @content;        
+    }
+}
+
+@mixin large {
+    @media screen and (max-width: map-get($query_breakpoints, "xl")) {
+        @content;        
+    }
+}
+
