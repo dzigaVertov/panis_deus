@@ -251,22 +251,28 @@ ul {
 
 
 /* Títulos del home ********************/
-h2 {
+.titulos {
     font-family: 'Arimo', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 270%;
     text-align: left;
     margin-left: 50%;
-    margin-bottom: 5px;  
-
-    @include small {
-        font-size: 190%;
-    }
+    text-align: left;
 
     @include xsmall {
         margin: 0;
         text-align: center;
+    }
+
+}
+
+h2 {
+    @extend .titulos;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 270%;
+    margin-bottom: 5px;  
+
+    @include small {
+        font-size: 190%;
     }
 
     &:hover {
@@ -280,23 +286,14 @@ h2 {
 }
 
 h3 {
-    font-family: 'Arimo', italic;
+    @extend .titulos;
+
     font-style: italic;
     font-weight: lighter;
     font-size: 100%;
-    text-align: left;
     color: $col_transp;
-    margin-left: 50%;
     margin-bottom: 50px;
-    vertical-align: middle;
-
-
-    @include xsmall {
-        margin: 0;
-        text-align: center;
-    }
-
-    
+    vertical-align: middle;    
 }
 /* ******************************** */
 

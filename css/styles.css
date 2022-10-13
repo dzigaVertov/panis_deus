@@ -197,21 +197,24 @@ ul {
     transform: scale(105%); } }
 
 /* Títulos del home ********************/
-h2 {
+.titulos, h2, h3 {
   font-family: 'Arimo', sans-serif;
+  text-align: left;
+  margin-left: 50%;
+  text-align: left; }
+  @media screen and (max-width: 576px) {
+    .titulos, h2, h3 {
+      margin: 0;
+      text-align: center; } }
+
+h2 {
   font-style: normal;
   font-weight: 600;
   font-size: 270%;
-  text-align: left;
-  margin-left: 50%;
   margin-bottom: 5px; }
   @media screen and (max-width: 768px) {
     h2 {
       font-size: 190%; } }
-  @media screen and (max-width: 576px) {
-    h2 {
-      margin: 0;
-      text-align: center; } }
   h2:hover {
     animation: deslizamiento 4s cubic-bezier(0.65, 0.01, 0.18, 1.01) 1; }
 
@@ -222,19 +225,12 @@ h2 {
     transform: translateX(5%); } }
 
 h3 {
-  font-family: 'Arimo', italic;
   font-style: italic;
   font-weight: lighter;
   font-size: 100%;
-  text-align: left;
   color: rgba(0, 0, 0, 0.5);
-  margin-left: 50%;
   margin-bottom: 50px;
   vertical-align: middle; }
-  @media screen and (max-width: 576px) {
-    h3 {
-      margin: 0;
-      text-align: center; } }
 
 /* ******************************** */
 a {
