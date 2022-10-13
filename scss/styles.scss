@@ -105,6 +105,7 @@ aside {
     padding: 15px;
 
     &:hover {
+        color: black;
         animation: menu_crecer 1s ease-in 2;
     }
 
@@ -204,11 +205,17 @@ article {
     grid-auto-columns: 1fr;
     align-items: center;
 
+    @include small {
+        width: 90%;
+    }
+
     @include xsmall {
         grid-auto-flow: row;
         grid-auto-columns: none;
         justify-items: center;
         height: auto;
+        width: 80%;
+        margin: auto;
     }
 }
 
@@ -290,6 +297,21 @@ nav {
     }
 }
 
+@each $cont in $controles_carousel {
+    .car_control_#{$cont} {
+        background-image: url("../assets/img/pizza-icon-#{$cont}.png");
+
+        @if $cont == "prev" {
+            margin-left: -160px;
+            @include xsmall {
+                margin-left: 0;
+            }            
+        }
+        
+    }
+    
+    
+}
 
 .calculadora_input {
     font-family: 'Arimo', sans-serif;
@@ -356,6 +378,7 @@ li a {
     @include xsmall {
         align-self: start;
         width: 60%;    
+        margin: auto;
     }
 }
 

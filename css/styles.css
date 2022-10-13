@@ -90,6 +90,7 @@ aside {
   text-align: left;
   padding: 15px; }
   .menu:hover {
+    color: black;
     animation: menu_crecer 1s ease-in 2; }
   @media screen and (max-width: 576px) {
     .menu {
@@ -172,12 +173,17 @@ article {
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    article {
+      width: 90%; } }
   @media screen and (max-width: 576px) {
     article {
       grid-auto-flow: row;
       grid-auto-columns: none;
       justify-items: center;
-      height: auto; } }
+      height: auto;
+      width: 80%;
+      margin: auto; } }
 
 /* Títulos del home ********************/
 h2 {
@@ -244,6 +250,16 @@ nav {
       width: 500px;
       margin: auto; } }
 
+.car_control_prev {
+  background-image: url("../assets/img/pizza-icon-prev.png");
+  margin-left: -160px; }
+  @media screen and (max-width: 576px) {
+    .car_control_prev {
+      margin-left: 0; } }
+
+.car_control_next {
+  background-image: url("../assets/img/pizza-icon-next.png"); }
+
 .calculadora_input {
   font-family: 'Arimo', sans-serif;
   font-style: normal;
@@ -300,7 +316,8 @@ li a {
   @media screen and (max-width: 576px) {
     .info {
       align-self: start;
-      width: 60%; } }
+      width: 60%;
+      margin: auto; } }
 
 .titulo {
   width: 50%;
