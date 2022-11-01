@@ -29,23 +29,58 @@
 
         <section class="circulo_central">
             
-            <article>
+            <article class="article_texto">
                 
-                <p class="titulo">Un poco de historia</p>
-                
+                <p class="titulo_textos">Un poco de historia</p>
 
-                <div class="container">
+                <div class="container-fluid">
+                  <div id="carousel_fotos" class="carousel slide" data-bs-ride="true" data-bs-interval="10000">
+                        
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="d-flex justify-content-center w-100 h-100">
+                          <img src="../assets/img/Michelangelo_-_Creation_of_Adam_(cropped) (1).jpg" alt="Dios creando la pizza">                        
+                        </div>
+                      </div>
+                      
+                      <div class="carousel-item">
+                        <div class="d-flex justify-content-center w-100 h-100">
+                          <img src="../assets/img/pizza_gigante.jpg" alt="Industria de la pizza en la actualidad">     
+                        </div>       
+                      </div>
+                      
+                      <div class="carousel-item">
+                        <div class="d-flex justify-content-center w-100 h-100">
+                          <img src="../assets/img/early-beginnings-of-pizza (1).jpg" alt="Antigua pizzería">            
+                        </div>
+                      </div>
+
+                      <div class="carousel-item">
+                        <div class="d-flex justify-content-center w-100 h-100">
+                          <img src="../assets/img/anchent-Rome.jpg" alt="Pizzaiolo en la antigüedad">      
+                        </div>      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid carousel_texto">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                         
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <p class="d-block info">En el principio creó Dios harina y agua. Pero he aquí que vio que la harina no levaba.  Hágase la levadura, dijo Dios y vio que la levadura era buena, para escarnio de quienes pecan con masa madre.  e aperiam.</p>    
+                            <p class="d-block info">En el principio creó Dios la harina y el agua. Pero he aquí que que la harina no levaba.  "¡Hágase la levadura!", dijo Dios y vio que la levadura era buena.  <br>Así, los pecadores de masa madre fueron enviados al último círculo del infierno.</p>    
                           </div>
                           <div class="carousel-item">
-                            <p class="d-block info">Lorem ipsum dolor, te fugiat, culpa dicta. ae non animi, harum praesentium debitis, assumenda impedit. Itaque, iure amet vitae repellat praesentium possimus perferendis vero ex. Nulla non delectus ratione placeat eum dolore aperiam.</p>
+                            <p class="d-block info">Resulta innegable, por otra parte, y ha sido comprobado por la ciencia gastronómica, que nuestra tendencia a alimentarnos con trozos circulares de pastas fermentadas horneadas a altas temperaturas es lo que nos separa de los animales.</p>
                           </div>
+
                           <div class="carousel-item">
-                            <p class="d-block info">Lorem ipsum dolor, te fugiat, culpa dicta. ae non animi, harum praesentium debitis, assumenda impedit. Itaque, iure amet vitae repellat praesentium possimus perferendis vero ex. Nulla non delectus ratione placeat eum dolore aperiam.</p>    
+                            <p class="d-block info">La palabra pizza, sin embargo, proviene del latín pinsa, que significa "aplastado", "presionado", en obvia alusión al estado de ánimo que mejor nos predispone a la ingesta del que fuera llamado por Borges "el quinto elemento", en su soneto: "A fine fainá".</p>
+                          </div>
+
+                          <div class="carousel-item">
+                            <p class="d-block info">En la actualidad, la industria de la pizza implica una facturación mundial de más de setecientos billones de dólares, sin contar aceitunas, motonetas de delivery, ni el cartón que se utiliza para la confección de las tradicionales cajas.</p>    
                           </div>
                         </div>
                 
@@ -81,8 +116,17 @@
         
 </div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script>
+  $('.carousel-control-next, .carousel-control-prev').on('click', function (e) {
+           var inst = $(this).data("bs-slide");
+           if(inst== "prev"){ 
+            $("#carousel_fotos").carousel("next")}
+           else{ $("#carousel_fotos").carousel("prev")}
+         });
+ </script>
 
 </body>
 </html>

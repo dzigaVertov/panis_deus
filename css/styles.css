@@ -69,7 +69,7 @@ main {
     background-size: 85%;
     width: 100%;
     max-width: 700px;
-    min-width: 400px;
+    min-width: 260px;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -79,22 +79,46 @@ main {
     justify-items: center;
     justify-content: center; }
     main .circulo_central article {
-      height: 100%;
       display: grid;
       grid-auto-flow: column;
-      grid-auto-columns: 1fr;
+      grid-auto-columns: 1fr 1fr;
+      grid-auto-rows: 1fr 1fr;
       align-items: center; }
+      main .circulo_central article::-webkit-scrollbar {
+        display: none; }
       @media screen and (max-width: 768px) {
         main .circulo_central article {
           width: 90%; } }
       @media screen and (max-width: 576px) {
         main .circulo_central article {
           grid-auto-flow: row;
-          grid-auto-columns: none;
+          grid-auto-rows: min-content;
           justify-items: center;
           height: auto;
           width: 80%;
-          margin: auto; } }
+          margin: auto;
+          overflow-y: scroll;
+          max-height: 300px; } }
+      main .circulo_central article .article_texto {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .1fr 1fr;
+        grid-auto-rows: none;
+        width: 90%; }
+      main .circulo_central article img {
+        grid-row: 2;
+        /* max-width: 50%; */
+        width: 60%;
+        border-radius: 20px;
+        box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.137);
+        margin-top: 1rem;
+        margin-left: 2rem; }
+        @media screen and (max-width: 576px) {
+          main .circulo_central article img {
+            margin: auto; } }
+      main .circulo_central article .carousel_texto {
+        grid-row: span 2; }
 
 aside {
   grid-column: 2/3;
@@ -130,7 +154,7 @@ aside {
         justify-content: space-around;
         align-items: center;
         justify-items: center;
-        width: 500px;
+        /* width: 500px;*/
         margin: auto; } }
     aside nav .menu {
       writing-mode: vertical-lr;
@@ -163,7 +187,7 @@ aside {
 /* Para el menú general */
 ul {
   margin: 15px;
-  height: 300px;
+  /* height: 300px; */
   padding-left: 5%;
   padding-inline-start: 0;
   width: 100%;
@@ -180,12 +204,15 @@ ul {
   ul li {
     margin: 0px;
     list-style: none;
-    font-size: 100%; }
+    font-size: 100%;
+    line-height: 5rem; }
     ul li:hover {
       animation: lista_crecer 1s ease-in 2; }
     @media screen and (max-width: 576px) {
       ul li {
-        text-align: center; } }
+        text-align: center;
+        font-size: 80%;
+        line-height: 4rem; } }
     ul li a {
       margin: 0;
       padding: 0px; }
@@ -247,9 +274,17 @@ a {
   @media screen and (max-width: 576px) {
     .car_control_prev {
       margin-left: 0; } }
+  @media screen and (max-width: 576px) {
+    .car_control_prev {
+      /*    margin-top: -400px; */
+      position: fixed; } }
 
 .car_control_next {
   background-image: url("../assets/img/pizza-icon-next.png"); }
+  @media screen and (max-width: 576px) {
+    .car_control_next {
+      /*    margin-top: -400px; */
+      position: fixed; } }
 
 .calculadora_input {
   font-family: 'Arimo', sans-serif;
@@ -319,7 +354,7 @@ footer {
       width: 60%;
       margin: auto; } }
 
-.titulo {
+.titulo, .titulo_textos {
   width: 50%;
   font-family: 'Arimo', sans-serif;
   font-style: normal;
@@ -330,15 +365,19 @@ footer {
   height: 400px;
   text-align: right;
   line-height: normal;
-  justify-self: end; }
+  justify-self: end;
+  align-self: center; }
   @media screen and (max-width: 576px) {
-    .titulo {
+    .titulo, .titulo_textos {
       height: auto;
       width: 100%;
       border: none;
       text-align: center;
       align-self: end;
       padding: 0; } }
+
+.titulo_textos {
+  height: auto; }
 
 .enviar {
   font-family: 'Arimo', sans-serif;

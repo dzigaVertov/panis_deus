@@ -29,21 +29,35 @@
     
     <main>
         <section class="circulo_central">
-            <article>
-                <p class="titulo">Quiénes somos?</p>
+            <article class="article_texto">
+                <p class="titulo_textos">Quiénes somos?</p>
+                <div class="container-fluid">
+                  <div id="carousel_fotos" class="carousel slide" data-bs-ride="true" data-bs-interval="10000">
+                        
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="d-flex justify-content-center w-100 h-100">
+                          <img src="../assets/img/Panis_deus_team.jpg" alt="El equipo de Panis deus haciendo buenas migas.">                        
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="d-flex justify-content-center w-100 h-100">
+                          <img src="../assets/img/CEO_Giancarlo.jpg" alt="Nuestro CEO y gerente de Catering">            
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                <div class="container">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="container-fluid carousel_texto">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" data-bs-interval="10000">
                         
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <p class="d-block info">Somos un grupo de personas apasionadas por todo lo que es carbohidrato, malla glutínica y objetos circulares de temperaturas moderadamente altas. e aperiam.</p>    
+                            <p class="d-block info">Somos un grupo de artistas, contadores y profesores de yoga apasionados por el carbohidrato, la malla glutínica y objetos circulares de temperaturas moderadamente altas.</p>    
                           </div>
                           <div class="carousel-item">
-                            <p class="d-block info">Lorem ipsum dolor, te fugiat, culpa dicta. ae non animi, harum praesentium debitis, assumenda impedit. Itaque, iure amet vitae repellat praesentium possimus perferendis vero ex. Nulla non delectus ratione placeat eum dolore aperiam.</p>
-                          </div>
-                          <div class="carousel-item">
-                            <p class="d-block info">Lorem ipsum dolor, te fugiat, culpa dicta. ae non animi, harum praesentium debitis, assumenda impedit. Itaque, iure amet vitae repellat praesentium possimus perferendis vero ex. Nulla non delectus ratione placeat eum dolore aperiam.</p>    
+                            <p class="d-block info">Nuestro CEO y Gerente de Catering, Giancarlo Pietrogallo, es el encargado de dictar personalmente las Masterclasses avanzadas de amasado, fermentación, cocción y corte.</p>
                           </div>
                         </div>
                 
@@ -52,7 +66,7 @@
                             <span class="visually-hidden">Previous</span>
                           </button>
                                 
-                        <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                           <span class="carousel-control-next-icon car_control_next" aria-hidden="true"></span>
                           <span class="visually-hidden">Next</span>
                         </button>
@@ -78,8 +92,16 @@
     </footer>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-
+<script>
+  $('.carousel-control-next, .carousel-control-prev').on('click', function (e) {
+           var inst = $(this).data("bs-slide");
+           if(inst== "prev"){ 
+            $("#carousel_fotos").carousel("next")}
+           else{ $("#carousel_fotos").carousel("prev")}
+         });
+ </script>
 </body>
 </html>
